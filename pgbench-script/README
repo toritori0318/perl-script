@@ -6,7 +6,7 @@ http://www.techscore.com/tech/sql/pgbench/6.html
 http://www.techscore.com/tech/sql/pgbench/7.html
 http://www.techscore.com/tech/sql/pgbench/8.html
 
-上記のベンチマークを一度に取得するためのperl-scriptです。
+上記のベンチマークを一度に取得するために作成したperl-scriptです。
 ベンチマーク自体はyamlで管理していますので
 環境に合わせたpgbenchの実行が可能となります。
 
@@ -16,8 +16,8 @@ http://www.techscore.com/tech/sql/pgbench/8.html
 perl pgbench.pl -c YAMLファイル名
 
 
-
 #--- YAMLファイルの説明（サンプルもご参照ください） ---#
+#--- bench1-4 まで指定可能です ---#
 
 global:
   pg_home: postgresのホームディレクトリ
@@ -33,5 +33,11 @@ bench1:
   client_interval: 接続クライアントのインターバル
   transaction: トランザクション数
   transaction_interval: トランザクションのインターバル
+
+
+
+#--- Todo ---#
+・グラフも表示できるといいよね
+
 
 
