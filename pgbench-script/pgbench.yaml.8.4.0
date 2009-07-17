@@ -1,0 +1,41 @@
+global:
+  pg_home: /pgsql/8.4.0
+  benchdata_create: 1
+  benchdata_scale: 30 
+  database: pgbenchtest
+  logfile: /tmp/pgbench.log.8.4.0
+
+bench1:
+  test_loop: 5
+  repeat_interval: 3
+  client: 10
+  client_interval: 40
+  transaction: 100
+  transaction_interval: 0
+
+bench2:
+  test_loop: 5
+  repeat_interval: 3
+  client: 1
+  client_interval: 0
+  transaction: 1000
+  transaction_interval: 2000
+
+bench3:
+  test_loop: 5
+  repeat_interval: 3
+  client: 10
+  client_interval: 20
+  transaction: 100
+  transaction_interval: 200
+
+bench4:
+  test_loop: 5
+  repeat_interval: 3
+  client: 30
+  client_interval: 30
+  transaction: 300
+  transaction_interval: 500
+  select_only: 1
+
+

@@ -1,0 +1,37 @@
+#--- pgbench script ---#
+
+
+#--- 概要 ---#
+http://www.techscore.com/tech/sql/pgbench/6.html
+http://www.techscore.com/tech/sql/pgbench/7.html
+http://www.techscore.com/tech/sql/pgbench/8.html
+
+上記のベンチマークを一度に取得するためのperl-scriptです。
+ベンチマーク自体はyamlで管理していますので
+環境に合わせたpgbenchの実行が可能となります。
+
+
+
+#--- 使い方 ---#
+perl pgbench.pl -c YAMLファイル名
+
+
+
+#--- YAMLファイルの説明（サンプルもご参照ください） ---#
+
+global:
+  pg_home: postgresのホームディレクトリ
+  benchdata_create: pgbench用データベースをdrop/createするかどうか
+  benchdata_scale: pgbench用データベースをcreateしたときのscale値 
+  database: pgbench用データベース名
+  logfile: 結果のログファイル名
+
+bench1:
+  test_loop: テストを実行する回数
+  repeat_interval: インターバル回数
+  client: 接続クライアント数
+  client_interval: 接続クライアントのインターバル
+  transaction: トランザクション数
+  transaction_interval: トランザクションのインターバル
+
+
