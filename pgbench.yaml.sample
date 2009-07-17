@@ -1,0 +1,15 @@
+global:
+  pg_home: /usr/local/pgsql
+  benchdata_create: 1
+  benchdata_scale: 25 
+  database: pgbenchtest
+  logfile: /tmp/pgbench.log
+
+bench1:
+  test_loop: 5
+  repeat_interval: 3
+  client: 10
+  client_interval: 40
+  transaction: 100
+  transaction_interval: 0
+
